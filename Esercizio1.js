@@ -45,25 +45,108 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // validazione email:
-// -deve contenere un "@"
-// dopo il @ deve essere presente un punto
+// -deve contenere un "@"   --> email.includes("@")
+
+// dopo il @ deve essere presente un punto --> 
+// dove si trova la @ (indexOf("@"))
+//cosa c`e` dopo? estrarre parte successiva a @ con slice
+//includes per verificare se c`e` .
+
 // non devono esserci spazi iniziali o Finali
 const validateEmail = (email) =>  {
     console.log("1.questa e:", email)
     let isValid=true
-console.log("2.questa e:", email)
+    let atIndex = email.indexOf("@")
+    let afterAt = email.slice(atIndex + 1)
+
     if(!email.includes("@") ) {
        isValid = false        
-       console.log("3.entro in if :", email)
+       console.log("2.entro nel primo if :", "email must include @")
     } 
-    console.log("4.questa e:", email)
+
+    if (email.includes("@") && !afterAt.includes(".")) {
+        isValid = false
+        console.log("3.entro nel 2 if:", "email must contain a dot")
+    }
+
+    if (email.startsWith(" ") || email.endsWith(" ")) {
+        isValid = false
+        console.log("4.entro nel 4 if:", "check for space at the beginning and the end of the email")
+    }
+    console.log("5.Return console.log:", email)
     return isValid
 }
 
 
 
-console.log(validateEmail("utente@dominio.com")) //true
-console.log(validateEmail("utentedominio.com")) //false
+// console.log(validateEmail("utente@dominiocom")) //true
+// console.log(validateEmail(" utentedominio.com")) //false
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
+// validazione email:
+//puo contenere solo numeri eventualmente divisi da spazi o trattini 
+//la stringa deve contenere esattamente 10 cifre
+
+const validatePhoneNumber = (phoneNumber) => {
+ let numberIsValid = true
+ const allowedValues = "1234567890- "
+ const phone = phoneNumber.split("")
+ let digitCount = 0;
+
+phone.forEach((elem) => {
+    if (!allowedValues.includes(elem)) { //se non e in allowedValues
+        console.log("enter first validation:")
+        numberIsValid = false
+    }
+   
+    if ("1234567890".includes(elem)) {
+        digitCount++
+    }
+
+})
+
+if ( digitCount !== 10) {
+    console.log("Enter second validation: Must contain exactly 10 digits.");
+    return false;
+}
+
+    
+
+return numberIsValid
+
+}
+
+
+console.log(validatePhoneNumber("777-979-61"))
+
+//USO REGEX
+
+// Serve a rimuovere spazi e trattini / [-\s] / g ?
+
+//   / e / → Indicano l'inizio e la fine della regex.
+//   [-\s] → Cerca trattini(-) o spazi(\s):
+// - → Il trattino viene cercato così com’è.
+// \s → Indica qualsiasi spazio(spazio normale, tab, ecc.). 3️⃣ g → Significa "global", cioè trova tutti i trattini e spazi, non solo il primo.
+
+// Questa regex verifica che ci siano solo numeri   /^\d + $ /
+
+//  ^ → Inizia dall'inizio della stringa.
+//  \d → Significa "qualsiasi cifra"(0 - 9).
+//  + → Vuol dire "una o più cifre".
+//  $ → Deve finire esattamente lì(evita caratteri extra).
+
+// .test() prende una stringa e la confronta con la regex.
+// Se la stringa rispetta la regex, restituisce true.
+// Se la stringa non rispetta la regex, restituisce false.
+
+const validatePhoneNumberRegex = (phoneNumber) => {
+    //Rimuovo spazi e trattini 
+    let onlyNumbers = phoneNumber.replace(/[-\s]/g,'');
+
+    //controlla se ha solo cifre e ha esattamente 1o cifre
+    if (!/^\d+$/.test(onlyNumbers) || onlyNumbers.length !== 10) { 
+        return false;
+    }
+    return true;
+};
