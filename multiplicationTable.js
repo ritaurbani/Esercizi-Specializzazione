@@ -4,13 +4,17 @@
 
 
 const multiplicationTable = (n) => {
-    let finalString = "";
+    let arr = [];
+    let finalString
+
     for(let i=1; i<= n; i++) {
         const curNum = i;
         const result = n*curNum 
-        const string = `${n}x${curNum}=${result},`
-        finalString +=string
-        console.log("string", string)
+        const string = `${n}x${curNum}=${result}`
+        arr.push(string)
+        finalString = arr.join(",")
+
+        console.log("trial:",arr)
     }
     return finalString
 }
