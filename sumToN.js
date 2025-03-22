@@ -48,18 +48,6 @@ console.log(sumToN(5)) // 15
 
 
 
-// isObject *: Check if a value is an object.
-// isObject({}) → true
 
-// longStrings *: Filter strings longer than 5 chars.  
-//    ["hi", "hello"].filter(longStrings) →["hello"]
 
-// stringify *: Convert numbers to strings.  
-//    [5].map(stringify) →["5"]
-
-// incrementEvens *: Add 1 to even numbers.  
-//    [2, 3].map(incrementEvens) →[3, 3]
-
-// replaceNegatives *: Replace negatives with 0.
-//     [-1, 2].map(replaceNegatives) →[0, 2]
 
