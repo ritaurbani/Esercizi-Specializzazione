@@ -1,9 +1,5 @@
 
- 
-// (EASY) 9. *findObjectById*: Find object with specific id.  
-//    findObjectById([{id: 1}, {id: 2}], 2) → {id: 2}  
-
-// (MEDIUM) 7. *isArrayOfNumbers*: Check if all array elements are numbers.  
+//  (MEDIUM) 7. *isArrayOfNumbers*: Check if all array elements are numbers.  
 //    isArrayOfNumbers([1, "2"]) → false  
 
 // (MEDIUM) 6. *isAllLetters*: Check if a string contains only letters.  
@@ -23,4 +19,32 @@
 
 // (MEDIUM/HARD) 5. *invertObject*: Swap keys and values.  
 //    invertObject({a: "x", b: "y"}) → {x: "a", y: "b"}  
+
+// (MEDIUM / HARD) 10. * groupByProperty *: Group objects by a property(e.g., "age").
+//     javascript
+// groupByProperty([{ age: 20 }, { age: 20 }], "age") 
+//     → { 20: [{ age: 20 }, { age: 20 }] }
+
+// 7. * countProperties *: Count the number of properties.
+//     countProperties({}) → 0  
+
+// (MEDIUM / HARD)9. * deepClone *: Create a deep copy of an object.
+//         deepClone({ data: [1, 2] }) → { data: [1, 2] }  
+
+// (MEDIUM / HARD)5. * isAnagram *: Check if two strings are anagrams.
+//     isAnagram("listen", "silent") → true  
+
+
+// (MEDIUM) 7. * maskEmail *: Mask part of an email(e.g., "te**@example.com").
+//         maskEmail("test@example.com") → "te**@example.com"
+
+
+// (MEDIUM) 9. * removePunctuation *: Remove punctuation from a string.
+//         removePunctuation("Hello!") → "Hello"
+
+// (MEDIUM)  10. * toCamelCase *: Convert hyphenated string to camelCase.
+//                 toCamelCase("hello-world") → "helloWorld"
+
+
+
 
