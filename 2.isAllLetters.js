@@ -9,7 +9,7 @@ const isAllLetters = (str) => {
             return false
         }
     }
-    return false
+    return true
     };
 
 
