@@ -20,10 +20,10 @@
 //     return true
 // }
 
-const isArrayOfNumbers1 = (arr) => {
-    return arr.every((n) => typeof n === "number")
-}
+// const isArrayOfNumbers1 = (arr) => {
+//     return arr.every((n) => typeof n === "number")
+// }
 
 
 
-isArrayOfNumbers1([1, "2"])
+console.log(isArrayOfNumbers([1, "2"]))

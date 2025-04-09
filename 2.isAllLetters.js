@@ -3,8 +3,8 @@
 //    isAllLetters("abc123") → false 
 
 const isAllLetters = (str) => {
-   const nums = [1,2,3,4,5,6,7,8,9,0]
-    for(let num of nums){
+   const numbers = [1,2,3,4,5,6,7,8,9,0]
+    for(let num of numbers){
         if (str.includes(num)){
             return false
         }
@@ -13,4 +13,4 @@ const isAllLetters = (str) => {
     };
 
 
-   isAllLetters("abc123")
+   console.log(isAllLetters("abc123"))
