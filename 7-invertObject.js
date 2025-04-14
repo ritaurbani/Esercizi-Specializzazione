@@ -5,15 +5,21 @@
 const invertObject = (obj) => {
     let newObj = {}
     for(let key in obj){
-        const value = obj[key]
-        newObj = {
-            value: key
-        }
+        newObj += 
+            obj[key]: key
+        
+        newObj[obj[key]] = key
     }
     return newObj
 }
-
-
+//WRONG
+//newObj = { obj[key]: key } crea un oggetto nuovo ogni volta (e lo assegna a newObj).
+//Alla fine del ciclo, newObj contiene solo 
+//l'ultima coppia perché viene sovrascritto ogni volta.
+//CORRETTO
+//newObj[obj[key]] = key significa:Prendi il valore(obj[key], es. "x") 
+// e usalo come chiave nel nuovo oggetto.Assegna a quella chiave 
+// il vecchio nome(key, es. "a").
 
 
 
