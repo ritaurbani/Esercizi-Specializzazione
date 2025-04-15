@@ -5,9 +5,6 @@
 const invertObject = (obj) => {
     let newObj = {}
     for(let key in obj){
-        newObj += 
-            obj[key]: key
-        
         newObj[obj[key]] = key
     }
     return newObj
@@ -21,6 +18,8 @@ const invertObject = (obj) => {
 // e usalo come chiave nel nuovo oggetto.Assegna a quella chiave 
 // il vecchio nome(key, es. "a").
 
-
+// nuovoOggetto[vecchioValore] = vecchiaChiave;
+// const value = obj[key]; 
+// newObj[value] = key;
 
 console.log(invertObject({ a: "x", b: "y" }))
