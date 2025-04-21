@@ -12,4 +12,4 @@ const extractValues = (obj) => {
  return resultArr
 }
 
-console.log(extractValues({x: 10, y: 20}) )
+console.log(extractValues({x: 10, x: 20}) )

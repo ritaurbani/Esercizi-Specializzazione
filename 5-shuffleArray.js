@@ -7,9 +7,8 @@ const shuffleArray = (arr) => {
    for(let i=0; i < arr.length; i++){
     const shuffledDigit = Math.floor(Math.random()*arr.length)+1
     console.log(shuffledDigit)
-    shuffleArray.push(shuffledDigit)
+    shuffledArray.push(shuffledDigit)
    }
-console.log(shuffledDigit)
 console.log(shuffledArray)
     return shuffledArray
 }

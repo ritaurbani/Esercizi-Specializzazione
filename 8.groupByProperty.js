@@ -9,7 +9,7 @@ const groupByProperty = (arr, keyP) => {
     const newObj = {}
     arr.forEach((obj) => { 
         for (let key in obj) {
-            if (obj[key] === obj[keyP]) {
+            if (key === keyP) {
                 console.log(obj[key])
                 console.log(obj[keyP])
                 newArr.push(obj)
@@ -19,7 +19,7 @@ const groupByProperty = (arr, keyP) => {
         console.log("check", newArr)
     })
 
-    newObj[obj[keyP]]: newArr
+    newObj[keyP] = newArr
 
     return newObj
 
