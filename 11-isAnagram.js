@@ -9,4 +9,6 @@ const isAnagram = (str1,str2) => {
 
 }
 
-console.log(isAnagram("anna", "papi"))
+console.log(isAnagram("listen", "silentsilent"))
+
+//controlla lunghezza

@@ -7,3 +7,5 @@ const deepClone = (obj) => {
 }
 
 console.log(deepClone({ data: [1, 2] }))
+
+//da fare - loop di property oggetto esso stesso 
