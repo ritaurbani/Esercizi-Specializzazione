@@ -1,0 +1,17 @@
+{
+  "name": "esercizi-specializzazione",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-isArrayOfNumbers.js",
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "mocha --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^11.1.0"
+  }
+}
