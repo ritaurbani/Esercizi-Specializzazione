@@ -13,6 +13,8 @@ const maskEmail = (email) => {
   if (!email) {
     return '';
   }
+  
+  
 
   const [name, domain] = email.split('@');
   const removedLastTwoLetetrs = name.slice(0, name.length - 2);
