@@ -11,7 +11,9 @@ const countOccurrences = (arr,elem) => {
     return count
 }
 
+console.log(countOccurrences([1,2,3],2 ))
 console.log(countOccurrences([1,2,3], ))
+console.log(countOccurrences([1,2,3], 8))
 
 module.exports = {
     countOccurrences
