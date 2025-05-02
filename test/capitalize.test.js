@@ -1,7 +1,7 @@
 const { capitalize } = require('../capitalize');
 const { expect } = require('chai');
 
-describe.only('capitalize', () => {
+describe('capitalize', () => {
   it('Returns an empty string if the input is an empty string', () => {
     const result = capitalize('');
 
