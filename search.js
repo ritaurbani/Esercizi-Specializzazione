@@ -9,9 +9,11 @@ const search = (array, element) => {
         return true
     }
 
-    if(!array.includes(element)){
-        return false
-    }
+    // if(!array.includes(element)){
+    //     return false
+    // }
+
+    return false
 }
 
 module.exports = {
